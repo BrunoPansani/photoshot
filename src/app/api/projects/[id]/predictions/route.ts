@@ -60,6 +60,17 @@ Keyword: ${prompt}
         project
       )}`,
       go_fast: true,
+      format: "png",
+      lora_scale: 1,
+      megapixels: "1",
+      num_outputs: 1,
+      aspect_ratio: "1:1",
+      output_format: "png",
+      guidance_scale: 3,
+      output_quality: 100,
+      prompt_strength: 0.8,
+      extra_lora_scale: 1,
+      num_inference_steps: 28,
       negative_prompt:
         process.env.REPLICATE_NEGATIVE_PROMPT ||
         "cropped face, cover face, cover visage, mutated hands",
