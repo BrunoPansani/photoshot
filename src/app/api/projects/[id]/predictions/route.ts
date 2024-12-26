@@ -57,6 +57,7 @@ Keyword: ${prompt}
         `${refinedPrompt}. This a portrait of ${project.instanceName} @me and not another person.`,
         project
       )}`,
+      go_fast: true,
       negative_prompt:
         process.env.REPLICATE_NEGATIVE_PROMPT ||
         "cropped face, cover face, cover visage, mutated hands",
