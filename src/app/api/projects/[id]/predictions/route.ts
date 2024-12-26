@@ -7,6 +7,8 @@ import { prompts } from "@/core/utils/prompts";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 
+export const maxDuration = 15;
+
 export async function POST(
   request: Request,
   { params }: { params: { id: string } }
