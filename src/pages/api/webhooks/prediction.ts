@@ -35,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const file = await fetch(outputUrl);
       const buffer = await file.arrayBuffer();
       const extension = outputUrl.split('.').pop();
-      const key = `${id}.${extension}`;
+      const key = `prediction-results/${prediction.id}.${extension}`;
       const s3Url = `https://${process.env.S3_UPLOAD_BUCKET}.s3.amazonaws.com/${key}`;
 
       await s3Client.send(

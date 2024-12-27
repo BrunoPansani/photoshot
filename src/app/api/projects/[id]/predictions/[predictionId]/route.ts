@@ -5,6 +5,8 @@ import { extractSeedFromLogs } from "@/core/utils/predictions";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 import { getPlaiceholder } from "plaiceholder";
+import s3Client from "@/core/clients/s3";
+import { PutObjectCommand } from "@aws-sdk/client-s3";
 
 export async function GET(
   request: Request,
@@ -39,11 +41,27 @@ export async function GET(
 
   const seedNumber = extractSeedFromLogs(prediction.logs!);
 
+  const extension = outputUrl.split('.').pop();
+  const key = `prediction-results/${prediction.id}.${extension}`;
+  const s3Url = `https://${process.env.S3_UPLOAD_BUCKET}.s3.amazonaws.com/${key}`;
+
+  (async () => {
+    const file = await fetch(outputUrl);
+    const buffer = await file.arrayBuffer();
+    await s3Client.send(
+      new PutObjectCommand({
+        Bucket: process.env.S3_UPLOAD_BUCKET!,
+        Key: key,
+        Body: Buffer.from(buffer),
+      })
+    );
+  })();
+
   shot = await db.shot.update({
     where: { id: shot.id },
     data: {
       status: prediction.status,
-      outputUrl: outputUrl || null,
+      outputUrl: s3Url || null,
       blurhash,
       seed: seedNumber || null,
     },
