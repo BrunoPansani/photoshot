@@ -25,7 +25,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Get the output URL from the webhook data
-    const outputUrl = output?.outputUrl;
+    const outputUrl = output?.[0]
+
+    console.log(`Output: ${output}`);
+    console.log(`Output URL: ${outputUrl}`);
 
     // Download the file, upload it to S3, and update the Shot record with the S3 URL
     if (outputUrl) {
@@ -51,6 +54,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
 
       console.log(`Shot: ${shot}`);
+    } else {
+      console.error('Output URL not found');
+      res.status(400).json({ message: 'Output URL not found' });
     }
 
     // Respond with a 200 status to acknowledge receipt of the webhook
