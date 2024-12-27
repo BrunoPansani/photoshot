@@ -55,6 +55,7 @@ Original Prompt: ${prompt}
   const prediction = await replicate.predictions.create({
     model: `${process.env.REPLICATE_USERNAME}/${project.id}`,
     version: project.modelVersionId!,
+    webhook: `${process.env.NEXTAUTH_URL}/api/webhooks/prediction`,
     input: {
       prompt: `${replacePromptToken(
         `${refinedPrompt}. This a portrait of ${project.instanceName} @me and not another person.`,

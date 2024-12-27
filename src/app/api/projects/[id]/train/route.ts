@@ -42,7 +42,7 @@ export async function POST(
         //max_train_steps: Number(process.env.REPLICATE_MAX_TRAIN_STEPS || 3000),
         //num_class_images: 200,
         //learning_rate: 1e-6,
-        webhook: `${process.env.NEXTAUTH_URL}/api/webhooks/completed`,
+        webhook: `${process.env.NEXTAUTH_URL}/api/webhooks/training`,
       },
     }
   );
