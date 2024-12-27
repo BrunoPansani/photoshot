@@ -33,13 +33,14 @@ export async function POST(
 
   const instruction = `${process.env.OPENAI_API_SEED_PROMPT}
 
+Extra Guidance:
 ${prompts.slice(0, 5).map(
   (style) => `${style.label}: ${style.prompt}
 
 `
 )}
 
-Keyword: ${prompt}
+Original Prompt: ${prompt}
 `;
 
   const chatCompletion = await openai.chat.completions.create({
