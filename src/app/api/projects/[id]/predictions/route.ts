@@ -44,9 +44,9 @@ Keyword: ${prompt}
 
   const chatCompletion = await openai.chat.completions.create({
     messages: [{ role: "user", content: instruction }],
-    model: "gpt-4-turbo",
+    model: "gpt-4o-mini",
     temperature: 0.5,
-    max_tokens: 200,
+    max_tokens: 1000,
   });
 
   let refinedPrompt = chatCompletion.choices?.[0]?.message?.content?.trim();
