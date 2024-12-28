@@ -79,7 +79,7 @@ const BuyShotButton = ({
       </MenuButton>
       <MenuList fontSize="sm">
         <MenuItem
-          command="$4"
+          command="$25"
           onClick={() => {
             handleShotPayment(100);
           }}
@@ -87,7 +87,7 @@ const BuyShotButton = ({
           <b>100 fotos</b>
         </MenuItem>
         <MenuItem
-          command="$7"
+          command="$45"
           onClick={() => {
             handleShotPayment(200);
           }}
@@ -95,7 +95,7 @@ const BuyShotButton = ({
           <b>200 fotos</b>
         </MenuItem>
         <MenuItem
-          command="$9"
+          command="$60"
           onClick={() => {
             handleShotPayment(300);
           }}
