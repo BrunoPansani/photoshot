@@ -11,7 +11,7 @@ import { Session } from "next-auth";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 import { HiLogout } from "react-icons/hi";
-import { IoIosFlash } from "react-icons/io";
+import { LogoIcon } from "./LogoIcon";
 
 const Header = ({ session }: { session: Session | null }) => {
   return (
@@ -34,9 +34,9 @@ const Header = ({ session }: { session: Session | null }) => {
           <Icon
             transition="200ms all"
             _groupHover={{ color: "brand.500" }}
-            as={IoIosFlash}
+            as={LogoIcon}
           />
-          <Text display={{ base: "none", sm: "inherit" }}>Photoshot.</Text>
+          <Text display={{ base: "none", sm: "inherit" }}>Photowiz</Text>
         </Flex>
         <HStack spacing={1}>
           <Button
