@@ -71,7 +71,7 @@ const Pricing = () => {
 
         <List mt={2} mb={4} spacing={1}>
           <CheckedListItem>
-            <b>1</b> Studio com um <b>modelo treinado personalizado</b>
+            <b>1</b> Studio com um <b>modelo de IA personalizado</b>
           </CheckedListItem>
           <CheckedListItem>
             <b>{process.env.NEXT_PUBLIC_STUDIO_SHOT_AMOUNT}</b> avatares em geração 4K
