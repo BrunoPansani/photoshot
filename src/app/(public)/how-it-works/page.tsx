@@ -2,7 +2,7 @@ import HowItWorksPage from "@/components/pages/HowItWorksPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Avatar: how it works",
+  title: "Avatar gerado por IA: como funciona",
 };
 
 const HowItWorks = () => <HowItWorksPage />;

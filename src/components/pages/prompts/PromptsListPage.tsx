@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-const title = "AI Prompts Inspiration";
+const title = "Inpire-se com nossos prompts de IA";
 export const description =
   "Nosso prompt de IA gratuito abrange uma ampla gama de temas e tópicos para ajudar você a criar um avatar único. Use o tema com nosso Studio ou com seus modelos Stable Diffusion ou Dreambooth.";
 

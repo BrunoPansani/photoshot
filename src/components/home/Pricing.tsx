@@ -53,7 +53,7 @@ const Pricing = () => {
           color="black"
           backgroundColor="brand.500"
         >
-          1 Studio + {process.env.NEXT_PUBLIC_STUDIO_SHOT_AMOUNT} shots
+          1 Studio + {process.env.NEXT_PUBLIC_STUDIO_SHOT_AMOUNT} fotos
         </Tag>
 
         <Box mt={2} fontWeight="black" fontSize="3.5rem">
@@ -78,7 +78,7 @@ const Pricing = () => {
           </CheckedListItem>
           <CheckedListItem>Refinamento de prompt por IA</CheckedListItem>
           <CheckedListItem>Crie seu próprio prompt</CheckedListItem>
-          <CheckedListItem>Desenvolvimento de patrocínio 🖤</CheckedListItem>
+          <CheckedListItem>Patrocínio ao desenvolvimento 💙</CheckedListItem>
         </List>
       </Box>
     </SimpleGrid>

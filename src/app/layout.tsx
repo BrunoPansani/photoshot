@@ -7,20 +7,20 @@ type Props = {
 };
 
 const description =
-  "Generate AI avatars that perfectly capture your unique style. Write a prompt and let our Dreambooth and Stable diffusion technology do the rest.";
+  "Gere avatares de IA que capturam perfeitamente o seu estilo único. Escreva um prompt e deixe nossa tecnologia Dreambooth e Stable Diffusion fazer o resto.";
 const image = "https://photoshot.app/og-cover.jpg";
 
 export const metadata: Metadata = {
   title: {
     template: "%s | Photowiz",
-    default: "Generate Custom AI avatar",
+    default: "Gere avatares customizados com IA",
   },
   description,
   twitter: {
     card: "summary_large_image",
     site: "@shinework",
     creator: "@shinework",
-    title: { template: "%s | Photowiz", default: "Generate Custom AI avatar" },
+    title: { template: "%s | Photowiz", default: "Gere avatares customizados com IA" },
     description,
     images: [
       {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: { template: "%s | Photowiz", default: "Generate Custom AI avatar" },
+    title: { template: "%s | Photowiz", default: "Gere avatares customizados com IA" },
     images: [
       description,
       {

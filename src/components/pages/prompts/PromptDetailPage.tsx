@@ -38,7 +38,7 @@ const PromptDetailPage = ({
           href="/prompts"
           as={Link}
         >
-          Back to prompts
+          Voltar aos prompts
         </Button>
       </Box>
       <Flex
@@ -59,7 +59,7 @@ const PromptDetailPage = ({
             {prompt?.label} avatar prompt
           </Text>
           <Text fontSize={{ base: "md", md: "xl" }} as="h2">
-            Become the {prompt?.label} with our free AI prompt
+            Se torne {prompt?.label} com nosso prompt de IA gratuito
           </Text>
         </VStack>
         <Flex
@@ -90,7 +90,7 @@ const PromptDetailPage = ({
                 as={Link}
                 rightIcon={<FaMagic />}
               >
-                Use prompt
+                Usar prompt
               </Button>
             </HStack>
           </VStack>
@@ -98,7 +98,7 @@ const PromptDetailPage = ({
       </Flex>
       <VStack alignItems="flex-start" overflow="hidden" my={10}>
         <Text fontWeight="bold" fontSize="2xl">
-          More AI Prompts
+          Mais prompts de IA
         </Text>
         <SimpleGrid
           columns={{ base: 2, sm: 3, md: 4, lg: 5 }}

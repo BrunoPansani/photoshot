@@ -53,7 +53,7 @@ const FormPayment = ({
         <Box>
           <Spinner speed="1s" size="xl" />
           <Text mt={2} size="sm">
-            Validating payment
+            Validando pagamento
           </Text>
         </Box>
       ) : (
@@ -71,20 +71,18 @@ const FormPayment = ({
             </Box>
           </Box>
           <Box fontWeight="bold" fontSize="xl">
-            Your Studio is ready to be trained!
+            Seu Studio está pronto para ser treinado!
           </Box>
           <List textAlign="left" spacing={1}>
             <CheckedListItem>
-              <b>1</b> Studio with a <b>custom trained model</b>
+              <b>1</b> Studio com um <b>modelo de IA personalizado</b>
             </CheckedListItem>
             <CheckedListItem>
-              <b>{process.env.NEXT_PUBLIC_STUDIO_SHOT_AMOUNT}</b> avatars 4K
-              generation
+              <b>{process.env.NEXT_PUBLIC_STUDIO_SHOT_AMOUNT}</b> avatares em geração 4K
             </CheckedListItem>
-            <CheckedListItem>AI prompt refinement</CheckedListItem>
+            <CheckedListItem>Refinamento de prompt por IA</CheckedListItem>
             <CheckedListItem>
-              Your Studio will be deleted 24 hours after your credits are
-              exhausted
+              Seu Studio será excluído 24 horas após seus créditos serem esgotados
             </CheckedListItem>
           </List>
           <Button
@@ -92,7 +90,7 @@ const FormPayment = ({
             variant="brand"
             href={`/api/checkout/session?ppi=${project.id}`}
           >
-            Unlock Now - {formatStudioPrice()}
+            Desbloquear Agora - {formatStudioPrice()}
           </Button>
           <Box pt={4}>
             <AvatarGroup size="md" max={10}>
@@ -101,6 +99,7 @@ const FormPayment = ({
               ))}
             </AvatarGroup>
           </Box>
+
         </VStack>
       )}
     </Box>
