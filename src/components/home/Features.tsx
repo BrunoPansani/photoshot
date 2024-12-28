@@ -36,15 +36,14 @@ const Features = () => {
         maxWidth="container.lg"
       >
         <SimpleGrid mb={10} columns={{ base: 1, md: 3 }}>
-          <Item iconName="publish.svg" title="1. Upload">
-            Upload <b>some selfies</b> of you (or other person) with different
-            angles
+          <Item iconName="publish.svg" title="1. Envie">
+            Envie <b>algumas selfie</b> suas (ou de outra pessoa) em diferentes ângulos.
           </Item>
-          <Item iconName="square.svg" title="2. Wait">
-            Take a coffee break while we build <b>your studio</b> based on your photos
+          <Item iconName="square.svg" title="2. Aguarde">
+            Dê uma pausa para o café enquanto construímos <b>seu estúdio</b> com base nas suas fotos.
           </Item>
-          <Item iconName="preview.svg" title="3. Prompt">
-            Use your imagination to craft the <b>perfect prompt!</b>
+          <Item iconName="preview.svg" title="3. Gere!">
+            Use sua imaginação para criar o <b>prompt perfeito!</b>
           </Item>
         </SimpleGrid>
       </Flex>

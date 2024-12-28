@@ -69,10 +69,10 @@ const BuyShotButton = ({
         <HStack spacing={0}>
           <IoIosFlash />
           {credits === 0 ? (
-            <Text>Buy more shots</Text>
+            <Text>Comprar mais créditos</Text>
           ) : (
             <Text>
-              {credits} Shot{credits > 1 && "s"} left
+              {credits} Foto{credits > 1 && "s"} restante{credits > 1 && "s"}
             </Text>
           )}
         </HStack>
@@ -84,7 +84,7 @@ const BuyShotButton = ({
             handleShotPayment(100);
           }}
         >
-          <b>100 shots</b>
+          <b>100 fotos</b>
         </MenuItem>
         <MenuItem
           command="$7"
@@ -92,7 +92,7 @@ const BuyShotButton = ({
             handleShotPayment(200);
           }}
         >
-          <b>200 shots</b>
+          <b>200 fotos</b>
         </MenuItem>
         <MenuItem
           command="$9"
@@ -100,7 +100,7 @@ const BuyShotButton = ({
             handleShotPayment(300);
           }}
         >
-          <b>300 shots</b>
+          <b>300 fotos</b>
         </MenuItem>
       </MenuList>
     </Menu>

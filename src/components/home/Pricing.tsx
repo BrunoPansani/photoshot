@@ -32,10 +32,10 @@ const Pricing = () => {
         transition="all 250ms"
       >
         <Text mt={2} fontWeight="black" fontSize="4xl">
-          Why not Free?
+          Por que não é gratuito?
         </Text>
         <Text mt={2} mb={4}>
-          Training a custom AI model is expensive due to the resources required.
+          Treinar um modelo de IA personalizado é caro devido aos recursos necessários. Acreditamos em oferecer a melhor qualidade de serviço e experiência aos nossos usuários e estamos comprometidos em criar o melhor modelo de IA para você.
         </Text>
       </Box>
       <Box
@@ -71,15 +71,14 @@ const Pricing = () => {
 
         <List mt={2} mb={4} spacing={1}>
           <CheckedListItem>
-            <b>1</b> Studio with a <b>custom trained model</b>
+            <b>1</b> Studio com um <b>modelo treinado personalizado</b>
           </CheckedListItem>
           <CheckedListItem>
-            <b>{process.env.NEXT_PUBLIC_STUDIO_SHOT_AMOUNT}</b> avatars 4K
-            generation
+            <b>{process.env.NEXT_PUBLIC_STUDIO_SHOT_AMOUNT}</b> avatares em geração 4K
           </CheckedListItem>
-          <CheckedListItem>AI prompt refinement</CheckedListItem>
-          <CheckedListItem>Craft your own prompt</CheckedListItem>
-          <CheckedListItem>Sponsorship development 🖤</CheckedListItem>
+          <CheckedListItem>Refinamento de prompt por IA</CheckedListItem>
+          <CheckedListItem>Crie seu próprio prompt</CheckedListItem>
+          <CheckedListItem>Desenvolvimento de patrocínio 🖤</CheckedListItem>
         </List>
       </Box>
     </SimpleGrid>

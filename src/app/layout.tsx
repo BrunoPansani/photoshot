@@ -12,7 +12,7 @@ const image = "https://photoshot.app/og-cover.jpg";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Photoshot",
+    template: "%s | Photowiz",
     default: "Generate Custom AI avatar",
   },
   description,
@@ -20,26 +20,26 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@shinework",
     creator: "@shinework",
-    title: { template: "%s | Photoshot", default: "Generate Custom AI avatar" },
+    title: { template: "%s | Photowiz", default: "Generate Custom AI avatar" },
     description,
     images: [
       {
         url: image,
         width: 1200,
         height: 630,
-        alt: "Photoshot",
+        alt: "Photowiz",
       },
     ],
   },
   openGraph: {
-    title: { template: "%s | Photoshot", default: "Generate Custom AI avatar" },
+    title: { template: "%s | Photowiz", default: "Generate Custom AI avatar" },
     images: [
       description,
       {
         url: image,
         width: 1200,
         height: 630,
-        alt: "Photoshot",
+        alt: "Photowiz",
       },
     ],
   },

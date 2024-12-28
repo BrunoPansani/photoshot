@@ -21,18 +21,18 @@ export default function LoginEmail({ url }: { url: string }): JSX.Element {
                 width="70px"
                 height="70px"
                 align="center"
-                src="https://photoshot.app/favicon.png"
+                // Get URL from .env
+                src="https://photowiz.pansani.dev/favicon.ico"
               />
               <MjmlText fontWeight={800} fontSize={20} align="center">
-                Your Photoshot Login Link
+                Seu link de login para Photowiz chegou
               </MjmlText>
             </MjmlColumn>
           </MjmlSection>
           <MjmlSection>
             <MjmlColumn>
               <MjmlText>
-                Welcome to Photoshot! Please click the magic link below to sign
-                in to your account.
+                Obrigado por acessar o Photowiz! Por favor clique no link abaixo para acessar sua conta.
               </MjmlText>
               <>
                 <MjmlButton
@@ -63,7 +63,13 @@ export default function LoginEmail({ url }: { url: string }): JSX.Element {
                 </a>
               </MjmlText>
               <MjmlText>
-                If you did not request this email, you can safely ignore it.
+                Se você não conseguir clicar no link, você pode copiar e colar o link abaixo no seu navegador de escolha: 
+              </MjmlText>
+              <MjmlText>
+                {url.replace(/^https?:\/\//, "")}
+              </MjmlText>
+              <MjmlText>
+                Se você não solicitou este email, você pode ignorá-lo com segurança.
               </MjmlText>
             </MjmlColumn>
           </MjmlSection>

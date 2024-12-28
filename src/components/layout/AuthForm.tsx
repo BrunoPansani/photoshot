@@ -55,9 +55,9 @@ export default function AuthForm() {
     <Stack spacing={4} width="100%" mx="auto" maxW="md" py={12} px={6}>
       <Stack textAlign="center" align="center" spacing={0}>
         <Text fontWeight="extrabold" as="h2" fontSize="4xl">
-          Sign in to Photoshot.
+          Faça login para acessar Photowiz
         </Text>
-        <Text fontSize="lg">Use your email address to sign in</Text>
+        <Text fontSize="lg">Use seu endereço de email para entrar</Text>
       </Stack>
       <Box rounded="lg" bg="white" boxShadow="lg" p={8}>
         <Stack
@@ -71,7 +71,7 @@ export default function AuthForm() {
           spacing={4}
         >
           <FormControl id="email">
-            <FormLabel>Email address</FormLabel>
+            <FormLabel>Endereço de E-mail</FormLabel>
             <Input
               required
               value={email}
@@ -87,7 +87,7 @@ export default function AuthForm() {
               type="submit"
               variant="brand"
             >
-              Send magic link
+              Enviar link mágico
             </Button>
           </Stack>
         </Stack>

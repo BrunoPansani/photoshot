@@ -49,7 +49,7 @@ export default function DashboardPage() {
             color="blackAlpha.700"
             textAlign="center"
           >
-            <Text backgroundColor="white">No studio available yet</Text>
+            <Text backgroundColor="white">Nenhum studio disponível ainda</Text>
           </Center>
         )}
 

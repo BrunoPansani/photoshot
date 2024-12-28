@@ -31,18 +31,18 @@ const ShotImage = dynamic(() => import("./ShotImage"));
 
 const getHdLabel = (shot: Shot, isHd: boolean) => {
   if (shot.hdStatus === "NO") {
-    return "Generate in 4K";
+    return "Gerar em 4K";
   }
 
   if (shot.hdStatus === "PENDING") {
-    return "4K in progress";
+    return "4K em processamento";
   }
 
   if (shot.hdStatus === "PROCESSED" && isHd) {
-    return "Show standard resolution";
+    return "Mostrar resolução padrão";
   }
 
-  return "Show 4K";
+  return "Mostrar 4K";
 };
 
 const ShotCard = ({
@@ -147,7 +147,7 @@ const ShotCard = ({
                 <VStack>
                   <Icon fontSize="3xl" as={TbFaceIdError} />
                   <Box fontSize="sm" color="blackAlpha.700">
-                    Shot generation failed
+                    Geração da foto falhou
                   </Box>
                 </VStack>
               </Center>
@@ -200,7 +200,7 @@ const ShotCard = ({
 
             <Tooltip
               hasArrow
-              label={`${shot.bookmarked ? "Remove" : "Add"} to your gallery`}
+              label={`${shot.bookmarked ? "Remover da" : "Adicionar à"} galeria`}
             >
               <IconButton
                 isLoading={isLoading}
@@ -237,7 +237,7 @@ const ShotCard = ({
             variant="link"
             onClick={onCopy}
           >
-            {hasCopied ? "Copied" : "Copy prompt"}
+            {hasCopied ? "Copiado" : "Copiar prompt"}
           </Button>
         </HStack>
       </Flex>

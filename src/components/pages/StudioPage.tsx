@@ -28,7 +28,7 @@ const StudioPage = ({ project }: IStudioPageProps) => (
           href="/dashboard"
           as={Link}
         >
-          Back to Dashboard
+          Voltar ao Painel
         </Button>
       </Box>
       <PromptPanel />

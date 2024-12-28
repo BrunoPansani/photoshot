@@ -65,7 +65,7 @@ const Uploader = ({ handleOnAdd }: { handleOnAdd: () => void }) => {
     onDrop: (acceptedFiles) => {
       if (files.length + acceptedFiles.length > MAX_FILES) {
         toast({
-          title: `You can't upload more than ${MAX_FILES} images`,
+          title: `Você não pode enviar mais de ${MAX_FILES} fotos`,
           duration: 3000,
           isClosable: true,
           position: "top-right",
@@ -84,7 +84,7 @@ const Uploader = ({ handleOnAdd }: { handleOnAdd: () => void }) => {
   const handleUpload = async () => {
     if (files.length < 5) {
       toast({
-        title: "You need to upload at least 5 photos",
+        title: "Você precisa enviar pelo menos 5 fotos",
         duration: 3000,
         isClosable: true,
         position: "top-right",
@@ -126,7 +126,7 @@ const Uploader = ({ handleOnAdd }: { handleOnAdd: () => void }) => {
         setUploadState("not_uploaded");
 
         toast({
-          title: "Studio created!",
+          title: "Studio criado!",
           duration: 3000,
           isClosable: true,
           position: "top-right",
@@ -158,34 +158,32 @@ const Uploader = ({ handleOnAdd }: { handleOnAdd: () => void }) => {
           </Box>
           <VStack textAlign="center" spacing={1}>
             <Box fontWeight="bold" fontSize="2xl">
-              Drag and drop or click to upload
+              Arraster e solte ou clique para fazer upload
             </Box>
             <Box fontWeight="bold" fontSize="lg">
               <Highlight
                 query="10-20 pictures"
                 styles={{ bg: "brand.500", px: 1 }}
               >
-                Upload 10-20 pictures of you
+                Envie 10-20 fotos suas
               </Highlight>
             </Box>
             <Box maxWidth="container.sm">
               <Text mt={4}>
-                To get the best results, we suggest uploading 3 full body or
-                entire object photos, 5 medium shots of the chest and up, and 10
-                close-up photos and:
+                Para obter os melhores resultados, sugerimos o envio de 3 fotos de corpo inteiro
+                ou do objeto completo, 5 fotos médias do peito para cima e 10 fotos de close-up e:
               </Text>
             </Box>
             <Box>
               <List mt={4} textAlign="left">
                 <CheckedListItem>
-                  Mix it up - change body pose, background, and lighting in each
-                  photo
+                Varie - altere a pose do corpo, o fundo e a iluminação em cada foto.
                 </CheckedListItem>
                 <CheckedListItem>
-                  Capture a range of expressions
+                Capture múltiplas expressões e cenas.
                 </CheckedListItem>
                 <CheckedListItem>
-                  {`Show the subject's eyes looking in different directions`}
+                  {`  Mostre os olhos da personagem olhando em diferentes direções.`}
                 </CheckedListItem>
               </List>
             </Box>
@@ -265,8 +263,8 @@ const Uploader = ({ handleOnAdd }: { handleOnAdd: () => void }) => {
             variant="brand"
           >
             {files.length < 5
-              ? "Upload (min 5 photos)"
-              : `Upload ${files.length} photo${files.length > 1 && "s"}`}
+              ? "Enviar (min. 5 fotos)"
+              : `Enviar ${files.length} foto${files.length > 1 && "s"}`}
           </Button>
         </Box>
       )}
@@ -298,16 +296,16 @@ const Uploader = ({ handleOnAdd }: { handleOnAdd: () => void }) => {
               onChange={(e) => setInstanceClass(e.currentTarget.value)}
               backgroundColor="white"
             >
-              <option value="man">Man</option>
-              <option value="woman">Woman</option>
-              <option value="child">Child</option>
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-              <option value="couple">Couple</option>
-              <option value="style">Style</option>
+              <option value="man">Homem</option>
+              <option value="woman">Mulher</option>
+              <option value="child">Criança</option>
+              <option value="dog">Cachorro</option>
+              <option value="cat">Gati</option>
+              <option value="couple">Casal</option>
+              <option value="style">Estilo</option>
             </Select>
             <FormHelperText color="blackAlpha.600">
-              Type of the subject
+              Classe do sujeito
             </FormHelperText>
           </FormControl>
           <Box>
@@ -322,7 +320,7 @@ const Uploader = ({ handleOnAdd }: { handleOnAdd: () => void }) => {
                 }
               }}
             >
-              Create your Studio
+              Crie seu Studio
             </Button>
           </Box>
         </SimpleGrid>

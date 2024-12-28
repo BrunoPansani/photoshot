@@ -21,7 +21,7 @@ const Demo = () => {
         width="100%"
         marginX="auto"
         fontSize="md"
-        shadow="0 14px 40px 10px #B5FFD9, 0 5px 10px -7px black"
+        shadow="0 14px 40px 10px rgb(201, 235, 255), 0 5px 10px -7px black"
         borderRadius="md"
         py={2}
         px={3}

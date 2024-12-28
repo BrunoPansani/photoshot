@@ -17,73 +17,72 @@ const FaqPage = () => (
       alignItems="flex-start"
     >
       <Text fontWeight="bold" fontSize="3xl">
-        Frequently Asked Questions
+        Perguntas Frequentes
       </Text>
 
       <Text fontWeight="bold" fontSize="xl">
-        📸 What kind of photos should I upload to the platform?
+        📸 Que tipo de fotos devo enviar para a plataforma?
       </Text>
       <Text>
-        We recommend that you upload a variety of photos to ensure that your
-        avatar is as accurate as possible. This may include close-up shots of
-        your face, photos of your profile, and full-body shots. {`It's`}{" "}
-        important to make sure that your photos are clear and of high quality,
-        and that they do not include any other people or animals. We also
-        recommend that you include a range of expressions, locations,
-        backgrounds, and perspectives in your photos to create the most accurate
-        avatar possible.
+        Recomendamos que você envie uma variedade de fotos para garantir que seu
+        avatar seja o mais preciso possível. Isso pode incluir fotos de close do seu
+        rosto, fotos de perfil e fotos de corpo inteiro. {`É`}{" "}
+        importante garantir que suas fotos sejam claras, de alta qualidade e que não
+        incluam outras pessoas ou animais. Também recomendamos que você inclua uma
+        gama de expressões, locais, cenários e perspectivas em suas fotos para criar
+        o avatar mais preciso possível.
       </Text>
       <Text fontWeight="bold" fontSize="xl">
-        👩‍🎨 How similar will the avatar be to my appearance?
+        👩‍🎨 Quão parecido será o avatar com a minha aparência?
       </Text>
       <Text>
-        The accuracy of your avatar will largely depend on the number and
-        variety of the photos that you provide. The better and more diverse the
-        photos are, the easier it will be for the AI to understand and replicate
-        your facial and bodily characteristics. As a result, your avatar will be
-        more likely to closely resemble your actual appearance!
+        A precisão do seu avatar dependerá principalmente do número e da variedade de
+        fotos que você fornecer. Quanto melhores e mais diversas forem as fotos, mais
+        fácil será para a IA entender e replicar suas características faciais e
+        corporais. Como resultado, seu avatar terá maior probabilidade de se parecer
+        com sua aparência real!
       </Text>
       <Text fontWeight="bold" fontSize="xl">
-        💰 Is it possible to obtain a refund?
+        💰 É possível obter um reembolso?
       </Text>
       <Text>
-        It is possible to obtain a refund for purchases made within the first 14
-        days, as long as you have not yet trained the AI. However, once the
-        14-day period has passed or if you have already used the service (by
-        clicking on the train button), you will no longer be eligible for a
-        refund.
+        É possível obter um reembolso para compras feitas dentro dos primeiros 14
+        dias, desde que você ainda não tenha treinado a IA. No entanto, após o
+        período de 14 dias ou se você já tiver usado o serviço (clicando no botão de
+        treinar), você não terá mais direito ao reembolso.
       </Text>
       <Text>
-        Please ensure that you upload a sufficient number of high-quality photos
-        to avoid disappointment with the generated avatars!
+        Certifique-se de enviar um número suficiente de fotos de alta qualidade para
+        evitar desapontamentos com os avatares gerados!
       </Text>
       <Text fontWeight="bold" fontSize="xl">
-        🖼 What will happen to my photos?
+        🖼 O que acontecerá com minhas fotos?
       </Text>
       <Text>
-        You may delete all of the photos and datasets associated with the studio
-        by deleting the studio from your account. Once the studio credits have
-        been exhausted, the model will be automatically deleted within 24 hours.
+        Você pode excluir todas as fotos e conjuntos de dados associados ao estúdio
+        excluindo o estúdio de sua conta. Assim que os créditos do estúdio forem
+        esgotados, o modelo será automaticamente excluído dentro de 24 horas.
       </Text>
       <Text>
-        To request that your account and all associated data be deleted, please
-        send an email to{" "}
-        <Link href="mailto:support@photoshot">support@photoshot</Link>. Please
-        note that by deleting your account, you will no longer have access to
-        any of the data or content associated with your account.
+        Para solicitar que sua conta e todos os dados associados sejam excluídos,
+        envie um e-mail para{" "}
+        <Link href="mailto:suporte@photowiz.com.br">suporte@photowiz.com.br</Link>. Por favor,
+        note que ao excluir sua conta, você não terá mais acesso a nenhum dos dados
+        ou conteúdos associados à sua conta.
       </Text>
       <Text>
-        Please be aware that only the data on Photoshot servers will be deleted.
-        Data that was transmitted to Replicate will not be deleted. You would
-        have to contact them in order to do so, according to their{" "}
-        <Link href="https://replicate.com/privacy">Terms of Service</Link>.
+        Esteja ciente de que apenas os dados nos servidores da Photowiz serão
+        excluídos. Dados transmitidos para o Replicate não serão excluídos. Você
+        precisará contatá-los para fazer isso, de acordo com os{" "}
+        <Link href="https://replicate.com/privacy">Termos de Serviço</Link> deles.
       </Text>
       <Text fontWeight="bold" fontSize="xl">
-        ❓ How it works?
+        ❓ Como funciona?
       </Text>
       <Text>
-        See <Link href="/how-it-works">this page</Link>
+        Veja <Link href="/how-it-works">esta página</Link>
       </Text>
+
     </VStack>
   </PageContainer>
 );

@@ -17,40 +17,40 @@ const HowItWorksPage = () => (
         fontWeight="extrabold"
         as="h1"
       >
-        AI Avatar: how it works?
+        Avatar com IA: como funciona?
       </Text>
       <Text>
-        Have you heard of Dreambooth? {"It's"} a new AI tool that uses the
-        stable diffusion model to create avatars that look just like you! The
-        stable diffusion model is a type of generative model that is used to
-        create images that are realistic and visually appealing.
+        Já ouviu falar do Dreambooth? {"É"} uma nova ferramenta de IA que utiliza o
+        modelo de difusão estável para criar avatares que se parecem exatamente com
+        você! O modelo de difusão estável é um tipo de modelo generativo usado para
+        criar imagens realistas e visualmente atraentes.
       </Text>
       <Text>
-        It works by diffusing the generated images through a series of filters,
-        which smooth out the image and make it more lifelike. This process is
-        repeated multiple times, with the generated images becoming increasingly
-        smooth and realistic with each iteration. Dreambooth uses the stable
-        diffusion model to create avatars that look like you, based on a set of
-        input data.
+        Ele funciona difundindo as imagens geradas por meio de uma série de filtros,
+        que suavizam a imagem e a tornam mais realista. Esse processo é repetido
+        várias vezes, com as imagens geradas tornando-se progressivamente mais
+        suaves e realistas a cada iteração. O Dreambooth usa o modelo de difusão
+        estável para criar avatares que se parecem com você, com base em um conjunto
+        de dados de entrada.
       </Text>
       <Text>
-        {"It's"} trained on a large dataset of images, and uses this training to
-        generate new images that are similar to the ones in the dataset. The
-        discriminator is used to determine whether the generated images are real
-        or fake. One of the benefits of Dreambooth is that it can create
-        high-quality avatars with relatively little training data. This makes it
-        a great option for situations where there is a limited amount of data
-        available, or when the data is too large to be processed by traditional
-        generative models.
+        {"É"} treinado em um grande conjunto de dados de imagens e utiliza esse
+        treinamento para gerar novas imagens semelhantes às do conjunto de dados. O
+        discriminador é usado para determinar se as imagens geradas são reais ou
+        falsas. Um dos benefícios do Dreambooth é que ele pode criar avatares de
+        alta qualidade com relativamente poucos dados de treinamento. Isso o torna
+        uma ótima opção para situações em que há uma quantidade limitada de dados
+        disponíveis ou quando os dados são muito grandes para serem processados por
+        modelos generativos tradicionais.
       </Text>
       <Text>
-        Overall, Dreambooth is a powerful AI tool that uses the stable diffusion
-        model to create avatars that look just like you. Its use of diffusion to
-        smooth out and refine the generated images makes it an effective and
-        efficient alternative to traditional generative models. So, it has the
-        potential to revolutionize the way we create avatars and could have a
-        wide range of applications in fields such as computer graphics, machine
-        learning, and more.
+        No geral, o Dreambooth é uma ferramenta poderosa de IA que utiliza o modelo
+        de difusão estável para criar avatares que se parecem exatamente com você. O
+        uso de difusão para suavizar e refinar as imagens geradas o torna uma
+        alternativa eficaz e eficiente aos modelos generativos tradicionais. Assim,
+        ele tem o potencial de revolucionar a maneira como criamos avatares e pode
+        ter uma ampla gama de aplicações em áreas como gráficos computacionais,
+        aprendizado de máquina e muito mais.
       </Text>
     </VStack>
   </PageContainer>

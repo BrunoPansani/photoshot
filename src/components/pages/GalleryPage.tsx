@@ -41,7 +41,7 @@ const GalleryPage = ({
           backgroundColor="white"
           textAlign="center"
         >
-          No shots in this gallery
+          Nenhuma foto disponível nessa galera
         </Box>
       )}
     </PageContainer>

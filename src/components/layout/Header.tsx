@@ -58,11 +58,11 @@ const Header = ({ session }: { session: Session | null }) => {
                   variant="ghost"
                   size="sm"
                 >
-                  My Gallery
+                  Minha Galeria
                 </Button>
               </Tooltip>
               <Button href="/dashboard" as={Link} variant="brand" size="sm">
-                Dashboard
+                Painel
               </Button>
               <Tooltip hasArrow label="Logout">
                 <IconButton

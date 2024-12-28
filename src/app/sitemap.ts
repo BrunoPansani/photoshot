@@ -2,13 +2,13 @@ import { prompts } from "@/core/utils/prompts";
 import { MetadataRoute } from "next";
 
 const routes = [
-  "https://photoshot.app",
-  "https://photoshot.app/terms",
-  "https://photoshot.app/faq",
-  "https://photoshot.app/prompts",
-  "https://photoshot.app/how-it-works",
+  "https://photowiz.app",
+  "https://photowiz.app/terms",
+  "https://photowiz.app/faq",
+  "https://photowiz.app/prompts",
+  "https://photowiz.app/how-it-works",
   ...prompts.map(
-    ({ slug }) => `https://photoshot.app/prompts/dreambooth/${slug}`
+    ({ slug }) => `https://photowiz.app/prompts/dreambooth/${slug}`
   ),
 ];
 

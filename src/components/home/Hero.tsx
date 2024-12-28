@@ -34,7 +34,7 @@ const Hero = () => {
               fontSize={{ base: "2.6rem", sm: "4rem" }}
               fontWeight="black"
             >
-              Your AI avatar generator
+              Gerador de Avatares com IA
             </Box>
             <Box
               as="h2"
@@ -42,8 +42,8 @@ const Hero = () => {
               fontSize={{ base: "xl", sm: "3xl" }}
               lineHeight={{ base: "xl", sm: "3xl" }}
             >
-              <b>Generate avatars</b> that perfectly capture{" "}
-              <b>your unique style</b>
+              <b>Gerador de imagens</b> que capturam perfeitamente{" "}
+              <b>o seu estilo</b>
             </Box>
           </Box>
           <Button
@@ -54,7 +54,7 @@ const Hero = () => {
             shadow="xl"
             rightIcon={<HiArrowRight />}
           >
-            Start Creating Now
+            Começe a criar agora
           </Button>
         </VStack>
         <Flex alignItems="center">
