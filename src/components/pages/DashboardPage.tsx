@@ -24,7 +24,7 @@ export default function DashboardPage() {
     <PageContainer>
       <Box>
         <Heading as="h2" mb={4} fontWeight="semibold" fontSize="2xl">
-          Create a new Studio
+          Crie um novo Studio
         </Heading>
         <Uploader
           handleOnAdd={() => {
@@ -35,7 +35,7 @@ export default function DashboardPage() {
 
       <Box mt={10}>
         <Heading as="h2" mb={4} fontWeight="semibold" fontSize="2xl">
-          My Studios
+          Meus Studios
         </Heading>
 
         {isLoading && <ProjectCardSkeleton />}

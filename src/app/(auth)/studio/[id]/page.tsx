@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 const PROJECTS_PER_PAGE = 9;
 
 export const metadata: Metadata = {
-  title: "My Studio",
+  title: "Meu Studio",
 };
 
 const Studio = async ({ params }: { params: { id: string } }) => {

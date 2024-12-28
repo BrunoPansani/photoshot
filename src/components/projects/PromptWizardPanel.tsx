@@ -46,8 +46,7 @@ const PromptWizardPanel = ({ onClose }: { onClose: () => void }) => {
       }}
     >
       <Text mb={2}>
-        Enter a <b>topic or concept</b> and our AI will generate a good prompt
-        example based on it:
+        Insira um <b>tópico ou conceito</b> básico e a nossa IA vai gerar um bom exemplo de prompt com base nele:
       </Text>
       <Input
         autoFocus
@@ -56,8 +55,7 @@ const PromptWizardPanel = ({ onClose }: { onClose: () => void }) => {
         onChange={(e) => setKeyword(e.currentTarget.value)}
       />
       <Text textAlign="right" width="100%" mt={1} fontSize="sm">
-        <b>{promptWizardCredits}</b> prompt assist
-        {promptWizardCredits > 1 ? "s" : ""} left
+        <b>{promptWizardCredits}</b> assistência{promptWizardCredits > 1 ? "s" : ""} de prompt restante{promptWizardCredits > 1 ? "s" : ""}
       </Text>
 
       <Button

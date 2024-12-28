@@ -91,7 +91,7 @@ const PromptPanel = () => {
         <Box flex="1">
           <Input
             size="lg"
-            placeholder="Who do you want to be?"
+            placeholder="Quem você quer ser?"
             disabled={shotCredits === 0}
             ref={promptInputRef}
             backgroundColor="white"
@@ -123,8 +123,7 @@ const PromptPanel = () => {
               height={48}
             />
             <Text fontSize="md">
-              The new shot will use <b>this image</b> as a guide (image to image
-              mode)
+            A nova foto usará <b>esta imagem</b> como guia (modo imagem para imagem).
               <br />
               <Button
                 onClick={() => {
@@ -159,8 +158,7 @@ const PromptPanel = () => {
               height={48}
             />
             <Text fontSize="md">
-              The new shot will use <b>the same style</b> as this image (same
-              seed)
+            A nova foto usará <b>o mesmo estilo</b> desta imagem (mesma seed).
               <br />
               <Button
                 onClick={() => {
@@ -170,7 +168,7 @@ const PromptPanel = () => {
                 variant="link"
                 colorScheme="red"
               >
-                Remove
+                Remover
               </Button>
             </Text>
           </HStack>
@@ -180,9 +178,9 @@ const PromptPanel = () => {
           <Box flex="1">
             <VStack alignItems="flex-start">
               <Text color="beige.500" fontSize="sm">
-                <Icon as={BsLightbulb} /> Add simple keywords like{" "}
-                <b>a viking, a astronaut, a ski monitor</b>... And we will do
-                the rest!
+                <Icon as={BsLightbulb} /> Adicione palavras-chave simples como{" "}
+                <b>um viking, um astronauta, um instrutor de esqui</b>... E nós faremos o
+                resto!
               </Text>
             </VStack>
           </Box>
@@ -195,7 +193,7 @@ const PromptPanel = () => {
           rightIcon={<FaCameraRetro />}
           isLoading={isCreatingPrediction}
         >
-          {shotCredits === 0 ? "No more shot" : "Shoot"}
+          {shotCredits === 0 ? "Sem fotos restantes" : "Gerar"}
         </Button>
       </Flex>
     </Flex>

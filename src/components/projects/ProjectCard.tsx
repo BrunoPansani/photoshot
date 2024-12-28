@@ -74,7 +74,7 @@ const ProjectCard = ({
             <Text fontSize="2xl" fontWeight="semibold">
               Studio <b>{getRefinedStudioName(project)}</b>{" "}
               {isReady && (
-                <Badge colorScheme="teal">{project.credits} shots left</Badge>
+                <Badge colorScheme="teal">{project.credits} fotos restantes</Badge>
               )}
             </Text>
             <Text textTransform="capitalize" fontSize="sm" color="beige.500">
@@ -146,7 +146,7 @@ const ProjectCard = ({
                 href={`/studio/${project.id}`}
                 as={Link}
               >
-                View my Studio
+                Ver meu Studio
               </Button>
             </VStack>
           </Center>

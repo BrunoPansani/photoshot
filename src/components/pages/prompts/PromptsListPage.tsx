@@ -13,7 +13,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const title = "AI Prompts Inspiration";
 export const description =
-  "Our free AI prompt covers a wide range of themes and topics to help you create a unique avatar. Use theme with our Studio or your Stable Diffusion or Dreambooth models.";
+  "Nosso prompt de IA gratuito abrange uma ampla gama de temas e tópicos para ajudar você a criar um avatar único. Use o tema com nosso Studio ou com seus modelos Stable Diffusion ou Dreambooth.";
 
 const PromptsListPage = () => {
   const [character, setCharacter] = useState<TCharacter>("romy");
