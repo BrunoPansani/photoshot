@@ -2,9 +2,9 @@ import { stripe } from "@/lib/stripe";
 import { NextResponse } from "next/server";
 
 const PRICES = {
-  100: { price: 400, promptWizardQuantity: 20 },
-  200: { price: 700, promptWizardQuantity: 40 },
-  300: { price: 900, promptWizardQuantity: 80 },
+  100: { price: 2500, promptWizardQuantity: 20 },
+  200: { price: 4500, promptWizardQuantity: 40 },
+  300: { price: 6000, promptWizardQuantity: 80 },
 };
 
 export async function GET(req: Request) {
@@ -28,10 +28,10 @@ export async function GET(req: Request) {
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: "brl",
             unit_amount: PRICES[quantity].price,
             product_data: {
-              name: `⚡️ Refill +${quantity} shots and ${PRICES[quantity].promptWizardQuantity} prompt assists`,
+              name: `⚡️ Refil de +${quantity} fotos e ${PRICES[quantity].promptWizardQuantity} assistências de prompt`,
             },
           },
           quantity: 1,
