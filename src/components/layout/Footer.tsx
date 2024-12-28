@@ -49,7 +49,7 @@ export default function Footer() {
         <Text></Text>
         <Stack alignItems="center" direction="row" spacing={4}>
           <Text fontSize="sm">
-            <Link href="/terms">Terms and Privacy</Link>
+            <Link href="/terms">Termos e Privacidade</Link>
           </Text>
           <Text fontSize="sm">
             <Link href="/faq">FAQ</Link>

@@ -66,7 +66,7 @@ const FaqPage = () => (
       <Text>
         Para solicitar que sua conta e todos os dados associados sejam excluídos,
         envie um e-mail para{" "}
-        <Link href="mailto:suporte@photowiz.com.br">suporte@photowiz.com.br</Link>. Por favor,
+        <Link href="mailto:suporte@photowiz.app">suporte@photowiz.app</Link>. Por favor,
         note que ao excluir sua conta, você não terá mais acesso a nenhum dos dados
         ou conteúdos associados à sua conta.
       </Text>

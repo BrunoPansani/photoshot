@@ -24,7 +24,7 @@ const TermsPage = () => (
         regulamentos aplicáveis em relação a quaisquer informações pessoais que possamos
         coletar sobre você, incluindo em nosso site,{" "}
         <Link textDecoration="underline" href="https://photowiz.app/">
-          https://photowiz.com.br/
+          https://photowiz.app/
         </Link>
         , e outros sites que possuímos e operamos.{" "}
       </Text>
@@ -164,7 +164,7 @@ const TermsPage = () => (
       <Text>
         Para solicitar que sua conta e todos os dados associados sejam excluídos,
         envie um e-mail para{" "}
-        <Link href="mailto:suporte@photowiz.com.br">suporte@photowiz.com.br</Link>. Por
+        <Link href="mailto:suporte@photowiz.app">suporte@photowiz.app</Link>. Por
         favor, observe que ao excluir sua conta, você não terá mais acesso a nenhum
         dos dados ou conteúdos associados à sua conta.
       </Text>
@@ -291,7 +291,7 @@ const TermsPage = () => (
       <Text>
         Para quaisquer dúvidas ou preocupações relacionadas à sua privacidade, você
         pode entrar em contato conosco usando os seguintes detalhes:{" "}
-        <Link href="mailto:suporte@photowiz.com.br">suporte@photowiz.com.br</Link>
+        <Link href="mailto:suporte@photowiz.app">suporte@photowiz.app</Link>
       </Text>
     </VStack>
   </PageContainer>

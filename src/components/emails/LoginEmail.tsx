@@ -22,7 +22,7 @@ export default function LoginEmail({ url }: { url: string }): JSX.Element {
                 height="70px"
                 align="center"
                 // Get URL from .env
-                src="https://photowiz.pansani.dev/favicon.ico"
+                src="https://photowiz.app/favicon.ico"
               />
               <MjmlText fontWeight={800} fontSize={20} align="center">
                 Seu link de login para Photowiz chegou
