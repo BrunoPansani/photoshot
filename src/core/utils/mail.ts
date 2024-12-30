@@ -226,7 +226,6 @@ export function getEmailProvider(email: string): EmailProvider {
 export const sendVerificationRequest = async (
   params: SendVerificationRequestParams,
 ) => {
-  console.log("sendVerificationRequest", params);
   let { identifier: email, url, provider: { from }, theme } = params;
   try {
     let send = await resend.emails.send({

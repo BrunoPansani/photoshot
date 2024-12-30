@@ -1,6 +1,8 @@
 import Providers from "@/components/Providers";
 import { getSession } from "@/lib/sessions";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 type Props = {
   children: React.ReactNode;
@@ -8,7 +10,7 @@ type Props = {
 
 const description =
   "Gere avatares de IA que capturam perfeitamente o seu estilo único. Escreva um prompt e deixe nossa tecnologia Dreambooth e Stable Diffusion fazer o resto.";
-const image = "https://photoshot.app/og-cover.jpg";
+const image = "https://photowiz.app/og-cover.jpg";
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +58,8 @@ export default async function RootLayout({ children }: Props) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body>
         <Providers session={session}>{children}</Providers>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
