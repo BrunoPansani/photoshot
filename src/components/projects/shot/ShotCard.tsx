@@ -167,7 +167,7 @@ const ShotCard = ({
                 <IconButton
                   size="sm"
                   as={Link}
-                  href={isHd ? shot.hdOutputUrl : shot.outputUrl}
+                  href={isHd ? shot.hdOutputUrl ?? undefined : shot.outputUrl ?? undefined}
                   target="_blank"
                   variant="ghost"
                   aria-label="Download"
