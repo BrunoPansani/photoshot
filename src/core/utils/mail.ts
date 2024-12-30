@@ -1,5 +1,9 @@
 // from https://github.com/fnando/email-provider-info
 
+import { SendVerificationRequestParams } from 'next-auth/providers';
+import resend from '@/core/clients/resend';
+import HTMLLoginEmail from '@/components/emails/HTMLLoginEmail';
+
 export type EmailProvider = {
   name: string;
   url: string;
@@ -11,6 +15,12 @@ export const providers: EmailProvider[] = [
     name: "Gmail",
     url: "https://mail.google.com/",
     hosts: ["gmail.com", "googlemail.com"],
+  },
+
+  {
+    name: "Outlook",
+    url: "https://outlook.live.com/",
+    hosts: ["outlook.com", "hotmail.com", "live.com"],
   },
 
   {
@@ -212,3 +222,32 @@ export function getEmailProvider(email: string): EmailProvider {
     }
   );
 }
+
+export const sendVerificationRequest = async (
+  params: SendVerificationRequestParams,
+) => {
+  console.log("sendVerificationRequest", params);
+  let { identifier: email, url, provider: { from }, theme } = params;
+  try {
+    let send = await resend.emails.send({
+      from: from,
+      to: email,
+      subject: 'Login to your Photowiz dashboard',
+      text: 'Click the magic link below to sign in to your account:\n\n' + url,
+      // Render the LoginEmail template
+      html: HTMLLoginEmail({
+        name: 'Photowiz',
+        loginUrl: url,
+        logoUrl: `${process.env.NEXTAUTH_URL}/logo.png`,
+        theme: theme
+      }),
+    });
+    
+    if (send.error) {
+      throw new Error(send.error?.message);
+    }
+
+  } catch (error) {
+    console.log({ error });
+  }
+};
