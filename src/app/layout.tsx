@@ -3,6 +3,7 @@ import { getSession } from "@/lib/sessions";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 type Props = {
   children: React.ReactNode;
@@ -61,6 +62,7 @@ export default async function RootLayout({ children }: Props) {
         <Analytics />
         <SpeedInsights />
       </body>
+      <GoogleAnalytics gaId="AW-1037086655" />
     </html>
   );
 }
