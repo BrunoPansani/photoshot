@@ -21,7 +21,7 @@ export async function GET(
       data: { stripePaymentId: session.id },
     });
 
-    sendGAEvent('event', 'conversion', { send_to: 'AW-1037086655/p--ACKb_6eADEL_fwu4D', transaction_id: session.id})
+    sendGAEvent('event', 'conversion', { send_to: 'AW-1037086655/p--ACKb_6eADEL_fwu4D', 'transaction_id': session.id})
 
     return NextResponse.json(
       {
