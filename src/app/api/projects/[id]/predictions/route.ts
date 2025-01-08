@@ -31,23 +31,35 @@ export async function POST(
     return NextResponse.json({ message: "No credit" }, { status: 400 });
   }
 
-  const instruction = `${process.env.OPENAI_API_SEED_PROMPT}
+  const instruction = `
+  User Prompt: ${prompt}
 
-Extra Guidance:
-${prompts.slice(0, 5).map(
-  (style) => `${style.label}: ${style.prompt}
+  Extra Guidance:
+  ${prompts.slice(0, 5).map(
+    (style) => `${style.label}: ${style.prompt}`
+  )}`;
 
-`
-)}
-
-Original Prompt: ${prompt}
-`;
+  // const chatCompletion = await openai.chat.completions.create({
+  //   messages: [{ role: "user", content: instruction }],
+  //   model: "gpt-4o-mini",
+  //   temperature: 0.5,
+  //   max_tokens: 1000,
+  // });
 
   const chatCompletion = await openai.chat.completions.create({
-    messages: [{ role: "user", content: instruction }],
+    messages: [
+      { 
+        role: "system", 
+        content: `${process.env.OPENAI_API_SEED_PROMPT}` 
+      },
+      {
+        role: "user",
+        content: instruction // This is where the user's input prompt will go
+      }
+    ],
     model: "gpt-4o-mini",
     temperature: 0.5,
-    max_tokens: 1000,
+    max_tokens: 2000,
   });
 
   let refinedPrompt = chatCompletion.choices?.[0]?.message?.content?.trim();
@@ -57,10 +69,12 @@ Original Prompt: ${prompt}
     version: project.modelVersionId!,
     input: {
       prompt: `${replacePromptToken(
-        `${refinedPrompt}. This a portrait of ${project.instanceName} @me and not another person.`,
+        `${refinedPrompt}
+        
+        The subject of this image must be ${project.instanceName} and not another subject/person.`,
         project
       )}`,
-      go_fast: true,
+      // go_fast: true,
       format: "png",
       lora_scale: 1,
       megapixels: "1",
