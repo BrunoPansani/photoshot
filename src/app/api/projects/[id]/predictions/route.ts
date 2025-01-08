@@ -39,6 +39,9 @@ export async function POST(
     (style) => `${style.label}: ${style.prompt}`
   )}`;
 
+  // Log the instruction to the console
+  console.log(`Instruction: ${instruction}`);
+
   // const chatCompletion = await openai.chat.completions.create({
   //   messages: [{ role: "user", content: instruction }],
   //   model: "gpt-4o-mini",
@@ -62,16 +65,18 @@ export async function POST(
     max_tokens: 2000,
   });
 
+  console.log(`Chat Completion: ${JSON.stringify(chatCompletion, null, 2)}`);
+
   let refinedPrompt = chatCompletion.choices?.[0]?.message?.content?.trim();
+
+  console.log(`Refined Prompt: ${refinedPrompt}`);
 
   const prediction = await replicate.predictions.create({
     model: `${process.env.REPLICATE_USERNAME}/${project.id}`,
     version: project.modelVersionId!,
     input: {
       prompt: `${replacePromptToken(
-        `${refinedPrompt}
-        
-        The subject of this image must be ${project.instanceName} and not another subject/person.`,
+        `${refinedPrompt} The subject of this image must be ${project.instanceName} and not another subject/person.`,
         project
       )}`,
       // go_fast: true,
