@@ -57,7 +57,7 @@ export async function POST(
       },
       {
         role: "user",
-        content: instruction // This is where the user's input prompt will go
+        content: prompt // This is where the user's input prompt will go
       }
     ],
     model: "gpt-4o-mini",
