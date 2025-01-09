@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   Center,
+  chakra,
   Flex,
   Spinner,
   Text,
@@ -21,6 +22,7 @@ import { useMutation } from "react-query";
 import { ProjectWithShots } from "../pages/StudioPage";
 import FormPayment from "./FormPayment";
 import ProjectDeleteButton from "./ProjectDeleteButton";
+import Image from "next/image";
 
 const ProjectCard = ({
   project,
@@ -133,10 +135,12 @@ const ProjectCard = ({
                 </VStack>
               ) : (
                 <AvatarGroup size="xl" max={10}>
-                  {project.shots
+                    {project.shots
                     .filter((shot) => Boolean(shot.outputUrl))
                     .map((shot) => (
-                      <Avatar key={shot.outputUrl} src={shot.outputUrl!} />
+                      <chakra.span rounded={"full"} position="relative" overflow={"hidden"} >
+                        <Image src={shot.outputUrl!} width={80} height={80} alt="Generated image" objectFit="cover" />
+                      </chakra.span>
                     ))}
                 </AvatarGroup>
               )}

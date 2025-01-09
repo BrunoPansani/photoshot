@@ -10,10 +10,8 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 's3.amazonaws.com',
-        port: '',
-        pathname: '/prediction-results//**',
-        search: '',
+        hostname: 'pansani-dev-photoshot-models.s3.amazonaws.com',
+        pathname: '/prediction-results/**',
       }
     ],
   },
