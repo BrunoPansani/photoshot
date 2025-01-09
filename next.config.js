@@ -8,6 +8,13 @@ const nextConfig = {
         protocol: "https",
         hostname: "replicate.delivery",
       },
+      {
+        protocol: 'https',
+        hostname: 's3.amazonaws.com',
+        port: '',
+        pathname: '/prediction-results//**',
+        search: '',
+      }
     ],
   },
 };
