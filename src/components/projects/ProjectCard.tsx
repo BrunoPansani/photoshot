@@ -139,7 +139,7 @@ const ProjectCard = ({
                     .filter((shot) => Boolean(shot.outputUrl))
                     .map((shot) => (
                       <chakra.span rounded={"full"} position="relative" overflow={"hidden"} >
-                        <Image src={shot.outputUrl!} width={80} height={80} alt="Generated image" objectFit="cover" />
+                        <Image src={shot.outputUrl!} width={80} height={80} alt="Generated image" objectFit="cover" key={shot.id} />
                       </chakra.span>
                     ))}
                 </AvatarGroup>
