@@ -37,25 +37,27 @@ export async function GET(
   if (outputUrl) {
     const { base64 } = await getPlaiceholder(outputUrl, { size: 16 });
     blurhash = base64;
+
+    const extension = outputUrl.split('.').pop();
+    const key = `prediction-results/${prediction.id}.${extension}`;
+    const s3Url = `https://${process.env.S3_UPLOAD_BUCKET}.s3.amazonaws.com/${key}`;
+
+    (async () => {
+      const file = await fetch(outputUrl);
+      const buffer = await file.arrayBuffer();
+      await s3Client.send(
+        new PutObjectCommand({
+          Bucket: process.env.S3_UPLOAD_BUCKET!,
+          Key: key,
+          Body: Buffer.from(buffer),
+        })
+      );
+    })();
   }
 
   const seedNumber = extractSeedFromLogs(prediction.logs!);
 
-  const extension = outputUrl.split('.').pop();
-  const key = `prediction-results/${prediction.id}.${extension}`;
-  const s3Url = `https://${process.env.S3_UPLOAD_BUCKET}.s3.amazonaws.com/${key}`;
 
-  (async () => {
-    const file = await fetch(outputUrl);
-    const buffer = await file.arrayBuffer();
-    await s3Client.send(
-      new PutObjectCommand({
-        Bucket: process.env.S3_UPLOAD_BUCKET!,
-        Key: key,
-        Body: Buffer.from(buffer),
-      })
-    );
-  })();
 
   shot = await db.shot.update({
     where: { id: shot.id },
