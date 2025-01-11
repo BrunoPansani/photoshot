@@ -53,21 +53,20 @@ export async function GET(
         })
       );
     })();
+
+    const seedNumber = extractSeedFromLogs(prediction.logs!);
+
+    shot = await db.shot.update({
+      where: { id: shot.id },
+      data: {
+        status: prediction.status,
+        outputUrl: s3Url || null,
+        blurhash,
+        seed: seedNumber || null,
+      },
+    });
+
   }
-
-  const seedNumber = extractSeedFromLogs(prediction.logs!);
-
-
-
-  shot = await db.shot.update({
-    where: { id: shot.id },
-    data: {
-      status: prediction.status,
-      outputUrl: s3Url || null,
-      blurhash,
-      seed: seedNumber || null,
-    },
-  });
 
   return NextResponse.json({ shot });
 }
