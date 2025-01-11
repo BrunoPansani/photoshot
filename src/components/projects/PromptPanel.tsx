@@ -68,16 +68,17 @@ const PromptPanel = () => {
       backgroundColor="white"
     >
       <Flex alignItems="center" justifyContent="space-between">
+
         <Text fontSize="2xl" fontWeight="semibold">
           Studio <b>{getRefinedStudioName(project)}</b>{" "}
-          <BuyShotButton
-            credits={shotCredits}
-            onPaymentSuccess={(credits, promptWizardCredits) => {
-              updateCredits(credits);
-              updatePromptWizardCredits(promptWizardCredits);
-            }}
-          />
         </Text>
+        <BuyShotButton
+          credits={shotCredits}
+          onPaymentSuccess={(credits, promptWizardCredits) => {
+            updateCredits(credits);
+            updatePromptWizardCredits(promptWizardCredits);
+          }}
+        />
       </Flex>
       <HStack mt={2}>
         <PromptsDrawer />
@@ -123,7 +124,7 @@ const PromptPanel = () => {
               height={48}
             />
             <Text fontSize="md">
-            A nova foto usará <b>esta imagem</b> como guia (modo imagem para imagem).
+              A nova foto usará <b>esta imagem</b> como guia (modo imagem para imagem).
               <br />
               <Button
                 onClick={() => {
@@ -158,7 +159,7 @@ const PromptPanel = () => {
               height={48}
             />
             <Text fontSize="md">
-            A nova foto usará <b>o mesmo estilo</b> desta imagem (mesma seed).
+              A nova foto usará <b>o mesmo estilo</b> desta imagem (mesma seed).
               <br />
               <Button
                 onClick={() => {

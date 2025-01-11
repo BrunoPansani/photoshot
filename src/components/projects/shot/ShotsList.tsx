@@ -45,7 +45,7 @@ const ShotsList = () => {
                   fetchShots();
                 }}
               >
-                Load more
+                Carregar mais
               </Button>
             </Box>
           )}
